@@ -11,7 +11,8 @@ int main() {
     do {
         printf("\nAddress Book Management System\n");
         printf("1. Add Contact\n");
-        printf("2. Exit\n");
+        printf("2. Display Contacts\n");
+        printf("3. Exit\n");
         printf("Enter your choice: ");
         scanf(" %c", &choice);
 
@@ -24,12 +25,15 @@ int main() {
                 addContact(contacts, &numContacts, name, phoneNumber);
                 break;
             case '2':
+                displayContacts(contacts, numContacts);
+                break;
+            case '3':
                 printf("Exiting program.\n");
                 break;
             default:
                 printf("Invalid choice. Please try again.\n");
         }
-    } while(choice != '2');
+    } while(choice != '3');
 
     return 0;
 }
