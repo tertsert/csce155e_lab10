@@ -15,6 +15,19 @@ void addContact(struct Contact contacts[], int *numContacts, char name[], char p
     }
 }
 
+// Function to compare two contacts for sorting
+int compareContacts(const void *a, const void *b) {
+    const struct Contact *contactA = (const struct Contact *)a;
+    const struct Contact *contactB = (const struct Contact *)b;
+    return strcmp(contactA->name, contactB->name);
+}
+
+// Function to sort contacts by name
+void sortContacts(struct Contact contacts[], int numContacts) {
+    qsort(contacts, numContacts, sizeof(struct Contact), compareContacts);
+    printf("Contacts sorted by name.\n");
+}
+
 // Function to display all contacts in the address book
 void displayContacts(struct Contact contacts[], int numContacts) {
     if (numContacts == 0) {

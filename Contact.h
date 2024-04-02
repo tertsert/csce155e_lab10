@@ -14,5 +14,6 @@ struct Contact {
 // Function declarations
 void addContact(struct Contact contacts[], int *numContacts, char name[], char phoneNumber[]);
 void displayContacts(struct Contact contacts[], int numContacts);
+void sortContacts(struct Contact contacts[], int numContacts);
 
 #endif // CONTACT_H
