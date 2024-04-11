@@ -22,11 +22,11 @@ int main() {
         switch(choice) {
             case '1':
                 printf("Enter contact name: ");
-                scanf("%s", name);
+                scanf(" %[^\n]s", name);
                 printf("Enter phone number: ");
-                scanf("%s", phoneNumber);
+                scanf(" %[^\n]s", phoneNumber);
                 printf("Enter email address: ");
-                scanf("%s", email);
+                scanf(" %[^\n]s", email);
                 addContact(contacts, &numContacts, name, phoneNumber, email);
                 break;
             case '2':
